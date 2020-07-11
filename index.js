@@ -11,7 +11,6 @@ const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
-
 function checkCollision(rock) {
   // implement me!
   // use the comments below to guide you!
@@ -54,7 +53,7 @@ function createRock(x) {
   rock.style.left = `${x}px`
   var top = 0 // Hmmm, why would we have used `var` here?
                   // To make it accessible to the rest of the layered function scopes.
-rock.style.top = top
+  rock.style.top = top
 
   /**
    * Now that we have a rock, we'll need to append
@@ -67,7 +66,7 @@ rock.style.top = top
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
    */
-  function moveRock() {
+function moveRock() {
     rock.style.top = `${top += 2}px`
 
     /**
